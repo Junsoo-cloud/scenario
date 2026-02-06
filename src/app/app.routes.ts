@@ -1,3 +1,34 @@
 import { Routes } from '@angular/router';
+import { HomePageComponent } from './pages/home/home.page';
+import { MarketListPageComponent } from './pages/market/market-list.page';
+import { MarketDetailPageComponent } from './pages/market/market-detail.page';
+import { MarketUploadPageComponent } from './pages/market/market-upload.page';
+import { CommunityListPageComponent } from './pages/community/community-list.page';
+import { CommunityDetailPageComponent } from './pages/community/community-detail.page';
+import { CommunityWritePageComponent } from './pages/community/community-write.page';
+import { MyPageComponent } from './pages/mypage/mypage.page';
+import { AdminPageComponent } from './pages/admin/admin.page';
+import { LoginPageComponent } from './pages/auth/login.page';
+import { SignupPageComponent } from './pages/auth/signup.page';
+import { TermsPageComponent } from './pages/policy/terms.page';
+import { PrivacyPageComponent } from './pages/policy/privacy.page';
+import { CopyrightPageComponent } from './pages/policy/copyright.page';
+import { NotFoundPageComponent } from './pages/not-found/not-found.page';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'market', component: MarketListPageComponent },
+  { path: 'market/upload', component: MarketUploadPageComponent },
+  { path: 'market/:id', component: MarketDetailPageComponent },
+  { path: 'community', component: CommunityListPageComponent },
+  { path: 'community/write', component: CommunityWritePageComponent },
+  { path: 'community/:id', component: CommunityDetailPageComponent },
+  { path: 'mypage', component: MyPageComponent },
+  { path: 'admin', component: AdminPageComponent },
+  { path: 'auth/login', component: LoginPageComponent },
+  { path: 'auth/signup', component: SignupPageComponent },
+  { path: 'policy/terms', component: TermsPageComponent },
+  { path: 'policy/privacy', component: PrivacyPageComponent },
+  { path: 'policy/copyright', component: CopyrightPageComponent },
+  { path: '**', component: NotFoundPageComponent }
+];

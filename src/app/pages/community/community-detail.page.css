@@ -1,0 +1,51 @@
+.post-detail {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--neutral-200);
+  padding: 2rem;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--neutral-600);
+  font-size: 0.85rem;
+}
+
+.author {
+  color: var(--neutral-600);
+}
+
+.content {
+  color: var(--neutral-800);
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.comments {
+  display: grid;
+  gap: 1rem;
+}
+
+.comment {
+  padding: 1rem;
+  border-radius: 16px;
+  background: var(--surface-soft);
+}
+
+.comment-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.comment-form textarea {
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 0.8rem;
+}

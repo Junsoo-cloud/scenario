@@ -1,0 +1,13 @@
+.policy {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 24px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  line-height: 1.7;
+}
+
+.policy h1 {
+  margin-bottom: 0.4rem;
+}

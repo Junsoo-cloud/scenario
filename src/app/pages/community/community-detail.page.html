@@ -1,0 +1,44 @@
+@if (post$ | async; as post) {
+  <article class="post-detail">
+    <header>
+      <div class="meta">
+        <span class="category">{{ post.category }}</span>
+        <span>{{ post.createdAt }}</span>
+      </div>
+      <h1>{{ post.title }}</h1>
+      <p class="author">{{ post.author }}</p>
+    </header>
+
+    <section class="content">
+      <p>
+        {{ post.excerpt }}
+      </p>
+      <p>
+        이 글은 시나리오 마켓에서 준비 중인 신규 기능 소개와 토론을 위한 샘플입니다.
+        제작자 관점에서 느낀 장르 트렌드를 공유해주세요.
+      </p>
+    </section>
+
+    <section class="actions">
+      <button class="btn ghost">좋아요</button>
+      <button class="btn ghost">북마크</button>
+      <button class="btn ghost">신고</button>
+    </section>
+
+    <section class="comments">
+      <h3>댓글 2</h3>
+      <div class="comment">
+        <strong>씨네연구소</strong>
+        <p>올해는 미스터리와 멜로가 동시에 뜨는 것 같아요.</p>
+      </div>
+      <div class="comment">
+        <strong>스토리러버</strong>
+        <p>작가 인터뷰도 같이 올라오면 좋겠습니다.</p>
+      </div>
+      <div class="comment-form">
+        <textarea rows="3" placeholder="댓글을 입력하세요"></textarea>
+        <button class="btn primary">댓글 등록</button>
+      </div>
+    </section>
+  </article>
+}

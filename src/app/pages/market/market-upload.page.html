@@ -1,0 +1,106 @@
+<section class="page-head">
+  <div>
+    <h1>시나리오 등록</h1>
+    <p>검수 기반 등록을 위해 기본 정보를 입력해 주세요.</p>
+  </div>
+  <button class="btn ghost">임시저장</button>
+</section>
+
+<form class="upload-form">
+  <div class="form-section">
+    <h3>작품 정보</h3>
+    <div class="grid two">
+      <label>
+        제목
+        <input type="text" placeholder="작품 제목" />
+      </label>
+      <label>
+        로그라인
+        <input type="text" placeholder="한 줄 소개" />
+      </label>
+    </div>
+    <label>
+      시놉시스
+      <textarea rows="4" placeholder="줄거리 요약"></textarea>
+    </label>
+    <div class="grid three">
+      <label>
+        카테고리
+        <select>
+          <option>영화</option>
+          <option>드라마</option>
+          <option>웹툰</option>
+          <option>연극/뮤지컬</option>
+          <option>숏폼/뉴미디어</option>
+        </select>
+      </label>
+      <label>
+        장르
+        <input type="text" placeholder="스릴러, 멜로" />
+      </label>
+      <label>
+        러닝타임/회차
+        <input type="text" placeholder="120분 / 12부작" />
+      </label>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>가격/공개 설정</h3>
+    <div class="grid two">
+      <label>
+        가격 유형
+        <select>
+          <option>고정가</option>
+          <option>가격문의</option>
+          <option>협의</option>
+        </select>
+      </label>
+      <label>
+        고정가 금액
+        <input type="number" placeholder="1,000,000" />
+      </label>
+    </div>
+    <label>
+      공개 범위
+      <select>
+        <option>전체 공개</option>
+        <option>일부 정보만 공개</option>
+        <option>승인된 계정만 열람</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="form-section">
+    <h3>파일 업로드</h3>
+    <div class="upload-box">
+      <p>샘플 PDF (최대 10MB)</p>
+      <button class="btn ghost" type="button">샘플 업로드</button>
+    </div>
+    <div class="upload-box">
+      <p>전체 시나리오 PDF/Word (최대 50MB)</p>
+      <button class="btn ghost" type="button">원본 업로드</button>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h3>작가 정보</h3>
+    <div class="grid two">
+      <label>
+        공개 작가명
+        <input type="text" placeholder="필명/실명" />
+      </label>
+      <label>
+        연락 가능 여부
+        <select>
+          <option>문의 허용</option>
+          <option>문의 비공개</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button class="btn dark" type="submit">검수 요청하기</button>
+  </div>
+</form>

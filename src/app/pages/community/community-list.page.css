@@ -1,0 +1,77 @@
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.boards {
+  margin: 1.6rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  border: 1px solid var(--neutral-200);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  background: white;
+}
+
+.pill.active {
+  background: var(--brand-600);
+  color: white;
+  border-color: var(--brand-600);
+}
+
+.post-list {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.post-card {
+  border: 1px solid var(--neutral-200);
+  border-radius: 20px;
+  padding: 1.2rem 1.4rem;
+  background: white;
+  position: relative;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+}
+
+.tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--brand-600);
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--neutral-600);
+}
+
+.card-link {
+  position: absolute;
+  inset: 0;
+  color: transparent;
+}
+
+@media (max-width: 720px) {
+  .page-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

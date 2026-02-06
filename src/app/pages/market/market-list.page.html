@@ -1,0 +1,78 @@
+<section class="page-head">
+  <div>
+    <h1>시나리오 마켓</h1>
+    <p>검수된 시나리오를 카테고리별로 검색하고 빠르게 문의하세요.</p>
+  </div>
+  <a class="btn primary" routerLink="/market/upload">시나리오 등록</a>
+</section>
+
+<section class="filters">
+  <div class="filter-group">
+    <label>카테고리</label>
+    <select>
+      <option>전체</option>
+      <option>영화</option>
+      <option>드라마</option>
+      <option>웹툰</option>
+      <option>연극/뮤지컬</option>
+      <option>숏폼/뉴미디어</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>장르</label>
+    <select>
+      <option>전체</option>
+      <option>스릴러</option>
+      <option>멜로</option>
+      <option>코미디</option>
+      <option>미스터리</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>가격</label>
+    <select>
+      <option>전체</option>
+      <option>고정가</option>
+      <option>가격문의</option>
+      <option>협의</option>
+    </select>
+  </div>
+  <div class="filter-group search">
+    <label>검색</label>
+    <input type="text" placeholder="제목, 작가, 키워드" />
+  </div>
+</section>
+
+<section class="script-grid">
+  @if (scripts$ | async; as scripts) {
+    @for (script of scripts; track script.id) {
+      <article class="script-card">
+        <div class="card-top">
+          <span class="badge">{{ script.category }}</span>
+          <span class="meta">조회 {{ script.views }} · 찜 {{ script.likes }}</span>
+        </div>
+        <h2>{{ script.title }}</h2>
+        <p>{{ script.logline }}</p>
+        <div class="tags">
+          @for (tag of script.keywords; track tag) {
+            <span>#{{ tag }}</span>
+          }
+        </div>
+        <div class="card-bottom">
+          <div>
+            <strong>{{ script.sellerName }}</strong>
+            <span>{{ script.genre }} · {{ script.runtime }}</span>
+          </div>
+          <div class="price">
+            @if (script.priceType === '고정가') {
+              {{ script.price | currency:'KRW':'symbol':'1.0-0' }}
+            } @else {
+              {{ script.priceType }}
+            }
+          </div>
+        </div>
+        <a class="card-link" [routerLink]="['/market', script.id]">상세 보기</a>
+      </article>
+    }
+  }
+</section>

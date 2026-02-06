@@ -1,0 +1,49 @@
+.page-head {
+  margin-bottom: 1.4rem;
+}
+
+.write-form {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 20px;
+  padding: 1.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+@media (max-width: 720px) {
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+}

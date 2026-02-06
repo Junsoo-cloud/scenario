@@ -1,0 +1,39 @@
+.auth-card {
+  max-width: 460px;
+  margin: 4rem auto;
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 24px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+}
+
+input {
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+.divider {
+  text-align: center;
+  color: var(--neutral-500);
+}
+
+.foot {
+  text-align: center;
+  font-size: 0.9rem;
+}

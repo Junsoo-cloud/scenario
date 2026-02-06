@@ -1,0 +1,41 @@
+<section class="page-head">
+  <div>
+    <h1>커뮤니티</h1>
+    <p>영화, 드라마, 웹툰, 시나리오 이야기를 자유롭게 나눠보세요.</p>
+  </div>
+  <a class="btn primary" routerLink="/community/write">글쓰기</a>
+</section>
+
+<section class="boards">
+  <button class="pill active">전체</button>
+  <button class="pill">영화 이야기</button>
+  <button class="pill">드라마 이야기</button>
+  <button class="pill">웹툰 이야기</button>
+  <button class="pill">시나리오 작법</button>
+  <button class="pill">자유게시판</button>
+</section>
+
+<section class="post-list">
+  @if (posts$ | async; as posts) {
+    @for (post of posts; track post.id) {
+      <article class="post-card">
+        <div class="post-head">
+          <span class="category">{{ post.category }}</span>
+          <span class="meta">{{ post.createdAt }}</span>
+        </div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt }}</p>
+        <div class="tags">
+          @for (tag of post.tags; track tag) {
+            <span>#{{ tag }}</span>
+          }
+        </div>
+        <div class="post-footer">
+          <span>{{ post.author }}</span>
+          <span>좋아요 {{ post.likes }} · 댓글 {{ post.comments }}</span>
+        </div>
+        <a class="card-link" [routerLink]="['/community', post.id]">상세 보기</a>
+      </article>
+    }
+  }
+</section>
