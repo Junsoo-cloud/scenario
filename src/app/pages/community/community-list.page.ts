@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule, AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CommunityService } from '../../services/community.service';
@@ -11,7 +11,6 @@ import { CommunityService } from '../../services/community.service';
   styleUrl: './community-list.page.css'
 })
 export class CommunityListPageComponent {
+  private communityService = inject(CommunityService);
   posts$ = this.communityService.getPosts();
-
-  constructor(private communityService: CommunityService) {}
 }

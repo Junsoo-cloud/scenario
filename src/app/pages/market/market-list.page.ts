@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule, CurrencyPipe, AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MarketService } from '../../services/market.service';
@@ -11,7 +11,6 @@ import { MarketService } from '../../services/market.service';
   styleUrl: './market-list.page.css'
 })
 export class MarketListPageComponent {
+  private marketService = inject(MarketService);
   scripts$ = this.marketService.getScripts();
-
-  constructor(private marketService: MarketService) {}
 }

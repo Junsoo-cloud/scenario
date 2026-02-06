@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule, CurrencyPipe, AsyncPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { map } from 'rxjs/operators';
@@ -13,13 +13,11 @@ import { MarketService } from '../../services/market.service';
   styleUrl: './home.page.css'
 })
 export class HomePageComponent {
+  private marketService = inject(MarketService);
+  private communityService = inject(CommunityService);
+
   featuredScripts$ = this.marketService
     .getScripts()
     .pipe(map((items) => items.slice(0, 3)));
   communityPosts$ = this.communityService.getPosts();
-
-  constructor(
-    private marketService: MarketService,
-    private communityService: CommunityService
-  ) {}
 }
